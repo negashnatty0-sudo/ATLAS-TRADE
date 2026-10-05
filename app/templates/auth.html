@@ -1,0 +1,4 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/static/app.css"></head>
+<body class="center login-page"><video class="ad-video" autoplay muted loop playsinline><source src="/static/atlastrade_ad.mp4" type="video/mp4"></video><div class="ad-overlay"></div><section class="card auth"><h1>ATLAS<span>TRADE</span></h1><h2>{{"Create account" if mode=="register" else "Sign in"}}</h2>
+<form method="post"><input name="email" type="email" placeholder="Email" required><input name="password" type="password" placeholder="Password" required minlength="8"><button>{{"Create account" if mode=="register" else "Sign in"}}</button></form>
+<a href="/auth/{{'login' if mode=='register' else 'register'}}">{{"Already have an account? Sign in" if mode=="register" else "Create an account"}}</a></section></body></html>

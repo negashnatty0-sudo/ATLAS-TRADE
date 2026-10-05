@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<h1>Admin Panel</h1><p class="muted">ATLAS TRADE · CEO: Natnael Negash</p><div class="card"><table><tr><th>Email</th><th>Admin</th><th>Created</th></tr>{% for u in users %}<tr><td>{{u.email}}</td><td>{{u.is_admin}}</td><td>{{u.created_at}}</td></tr>{% endfor %}</table></div>{% endblock %}

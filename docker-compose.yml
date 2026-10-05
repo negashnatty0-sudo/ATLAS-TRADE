@@ -1,0 +1,15 @@
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: atlastrade
+      POSTGRES_USER: atlas
+      POSTGRES_PASSWORD: change_me
+    ports: ["5432:5432"]
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgresql+psycopg://atlas:change_me@db:5432/atlastrade
+      SECRET_KEY: change_me
+    ports: ["8000:8000"]
+    depends_on: [db]
